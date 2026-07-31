@@ -13,6 +13,11 @@ final class DeepLinkParserTests: XCTestCase {
         let url = URL(string: "bankingapp://settings")!
         XCTAssertNil(DeepLinkParser.route(from: url))
     }
+ 
     
+    func test_route_returnsLogin_forLoginHost() {
+        let url = URL(string: "bankingapp://login")!
+        XCTAssertEqual(DeepLinkParser.route(from: url), .login)
+    }
     
 }
