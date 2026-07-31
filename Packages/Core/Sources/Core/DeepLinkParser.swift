@@ -18,18 +18,21 @@ public enum DeepLinkParser {
             return .login
             
         case "transactions":
-            guard let id = URLComponents(url: url, resolvingAgainstBaseURL: false)?
-                .queryItems?
-                .first(where: { $0.name == "accountID" })?
-                .value
-            else { return nil }
-            
+            guard let id = accountID(from: url) else { return nil }
             return .transactions(accountID: id)
             
         default:
             return nil
         }
         
+    }
+    
+    
+    private static func accountID(from url: URL) -> String? {
+        URLComponents(url: url, resolvingAgainstBaseURL: false)?
+            .queryItems?
+            .first(where: { $0.name == "accountID" })?
+            .value
     }
     
 }
