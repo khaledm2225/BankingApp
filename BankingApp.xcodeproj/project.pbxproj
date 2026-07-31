@@ -6,13 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5FD468A8301D21F9000D01D1 /* HomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 5FD468A7301D21F9000D01D1 /* HomeFeature */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5FFFE190301D191C0059027E /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5FD468A5301D2156000D01D1 /* Exceptions for "BankingApp" folder in "BankingApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HomeFeature,
+			);
+			target = 5FFFE18F301D191C0059027E /* BankingApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5FFFE192301D191C0059027E /* BankingApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5FD468A5301D2156000D01D1 /* Exceptions for "BankingApp" folder in "BankingApp" target */,
+			);
 			path = BankingApp;
 			sourceTree = "<group>";
 		};
@@ -23,16 +40,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FD468A8301D21F9000D01D1 /* HomeFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FD468A6301D21F9000D01D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5FFFE187301D191C0059027E = {
 			isa = PBXGroup;
 			children = (
 				5FFFE192301D191C0059027E /* BankingApp */,
+				5FD468A6301D21F9000D01D1 /* Frameworks */,
 				5FFFE191301D191C0059027E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +91,7 @@
 			);
 			name = BankingApp;
 			packageProductDependencies = (
+				5FD468A7301D21F9000D01D1 /* HomeFeature */,
 			);
 			productName = BankingApp;
 			productReference = 5FFFE190301D191C0059027E /* BankingApp.app */;
@@ -345,6 +372,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FD468A7301D21F9000D01D1 /* HomeFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FFFE188301D191C0059027E /* Project object */;
 }
