@@ -7,29 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FD468A8301D21F9000D01D1 /* HomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 5FD468A7301D21F9000D01D1 /* HomeFeature */; };
+		5F798A95301D2826009E0F59 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798A94301D2826009E0F59 /* Core */; };
+		5F798A98301D2855009E0F59 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798A97301D2855009E0F59 /* DesignSystem */; };
+		5F798A9B301D286D009E0F59 /* SecurityKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798A9A301D286D009E0F59 /* SecurityKit */; };
+		5F798A9E301D2882009E0F59 /* NetworkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798A9D301D2882009E0F59 /* NetworkKit */; };
+		5F798AA1301D2898009E0F59 /* StorageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798AA0301D2898009E0F59 /* StorageKit */; };
+		5F798AA4301D2937009E0F59 /* AuthFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798AA3301D2937009E0F59 /* AuthFeature */; };
+		5F798AA7301D2946009E0F59 /* HomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798AA6301D2946009E0F59 /* HomeFeature */; };
+		5F798AAA301D2956009E0F59 /* TransactionsHistoryFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 5F798AA9301D2956009E0F59 /* TransactionsHistoryFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5FFFE190301D191C0059027E /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5FD468A5301D2156000D01D1 /* Exceptions for "BankingApp" folder in "BankingApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				HomeFeature,
-			);
-			target = 5FFFE18F301D191C0059027E /* BankingApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5FFFE192301D191C0059027E /* BankingApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				5FD468A5301D2156000D01D1 /* Exceptions for "BankingApp" folder in "BankingApp" target */,
-			);
 			path = BankingApp;
 			sourceTree = "<group>";
 		};
@@ -40,25 +34,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FD468A8301D21F9000D01D1 /* HomeFeature in Frameworks */,
+				5F798A9E301D2882009E0F59 /* NetworkKit in Frameworks */,
+				5F798AAA301D2956009E0F59 /* TransactionsHistoryFeature in Frameworks */,
+				5F798AA7301D2946009E0F59 /* HomeFeature in Frameworks */,
+				5F798A95301D2826009E0F59 /* Core in Frameworks */,
+				5F798AA1301D2898009E0F59 /* StorageKit in Frameworks */,
+				5F798AA4301D2937009E0F59 /* AuthFeature in Frameworks */,
+				5F798A98301D2855009E0F59 /* DesignSystem in Frameworks */,
+				5F798A9B301D286D009E0F59 /* SecurityKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5FD468A6301D21F9000D01D1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5FFFE187301D191C0059027E = {
 			isa = PBXGroup;
 			children = (
 				5FFFE192301D191C0059027E /* BankingApp */,
-				5FD468A6301D21F9000D01D1 /* Frameworks */,
 				5FFFE191301D191C0059027E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +84,14 @@
 			);
 			name = BankingApp;
 			packageProductDependencies = (
-				5FD468A7301D21F9000D01D1 /* HomeFeature */,
+				5F798A94301D2826009E0F59 /* Core */,
+				5F798A97301D2855009E0F59 /* DesignSystem */,
+				5F798A9A301D286D009E0F59 /* SecurityKit */,
+				5F798A9D301D2882009E0F59 /* NetworkKit */,
+				5F798AA0301D2898009E0F59 /* StorageKit */,
+				5F798AA3301D2937009E0F59 /* AuthFeature */,
+				5F798AA6301D2946009E0F59 /* HomeFeature */,
+				5F798AA9301D2956009E0F59 /* TransactionsHistoryFeature */,
 			);
 			productName = BankingApp;
 			productReference = 5FFFE190301D191C0059027E /* BankingApp.app */;
@@ -121,6 +121,16 @@
 			);
 			mainGroup = 5FFFE187301D191C0059027E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5F798A93301D2826009E0F59 /* XCLocalSwiftPackageReference "Packages/Core" */,
+				5F798A96301D2855009E0F59 /* XCLocalSwiftPackageReference "Packages/DesignSystem" */,
+				5F798A99301D286D009E0F59 /* XCLocalSwiftPackageReference "Packages/SecurityKit" */,
+				5F798A9C301D2882009E0F59 /* XCLocalSwiftPackageReference "Packages/NetworkKit" */,
+				5F798A9F301D2898009E0F59 /* XCLocalSwiftPackageReference "Packages/StorageKit" */,
+				5F798AA2301D2937009E0F59 /* XCLocalSwiftPackageReference "Packages/AuthFeature" */,
+				5F798AA5301D2946009E0F59 /* XCLocalSwiftPackageReference "Packages/HomeFeature" */,
+				5F798AA8301D2956009E0F59 /* XCLocalSwiftPackageReference "Packages/TransactionsHistoryFeature" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5FFFE191301D191C0059027E /* Products */;
 			projectDirPath = "";
@@ -277,6 +287,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BankingApp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -285,9 +297,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.4;
@@ -297,13 +309,14 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 26.4;
 			};
 			name = Debug;
@@ -319,6 +332,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BankingApp;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -327,9 +342,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.4;
@@ -339,13 +354,14 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 26.4;
 			};
 			name = Release;
@@ -373,10 +389,73 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		5F798A93301D2826009E0F59 /* XCLocalSwiftPackageReference "Packages/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Core;
+		};
+		5F798A96301D2855009E0F59 /* XCLocalSwiftPackageReference "Packages/DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/DesignSystem;
+		};
+		5F798A99301D286D009E0F59 /* XCLocalSwiftPackageReference "Packages/SecurityKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/SecurityKit;
+		};
+		5F798A9C301D2882009E0F59 /* XCLocalSwiftPackageReference "Packages/NetworkKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/NetworkKit;
+		};
+		5F798A9F301D2898009E0F59 /* XCLocalSwiftPackageReference "Packages/StorageKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/StorageKit;
+		};
+		5F798AA2301D2937009E0F59 /* XCLocalSwiftPackageReference "Packages/AuthFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/AuthFeature;
+		};
+		5F798AA5301D2946009E0F59 /* XCLocalSwiftPackageReference "Packages/HomeFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/HomeFeature;
+		};
+		5F798AA8301D2956009E0F59 /* XCLocalSwiftPackageReference "Packages/TransactionsHistoryFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/TransactionsHistoryFeature;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		5FD468A7301D21F9000D01D1 /* HomeFeature */ = {
+		5F798A94301D2826009E0F59 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		5F798A97301D2855009E0F59 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		5F798A9A301D286D009E0F59 /* SecurityKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SecurityKit;
+		};
+		5F798A9D301D2882009E0F59 /* NetworkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkKit;
+		};
+		5F798AA0301D2898009E0F59 /* StorageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StorageKit;
+		};
+		5F798AA3301D2937009E0F59 /* AuthFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthFeature;
+		};
+		5F798AA6301D2946009E0F59 /* HomeFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HomeFeature;
+		};
+		5F798AA9301D2956009E0F59 /* TransactionsHistoryFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TransactionsHistoryFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

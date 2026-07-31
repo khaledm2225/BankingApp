@@ -1,7 +1,7 @@
 import XCTest
-@testable import StorageKit
+@testable import HomeFeature
 
-final class StorageKitTests: XCTestCase {
+final class HomeFeatureTests: XCTestCase {
     func test_targetCompiles() {
         XCTAssertTrue(true)
     }

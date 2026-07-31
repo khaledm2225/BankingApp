@@ -1,27 +1,18 @@
-// swift-tools-version: 6.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 5.7
 
 import PackageDescription
 
 let package = Package(
     name: "StorageKit",
+    platforms: [.iOS(.v16)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "StorageKit",
-            targets: ["StorageKit"]
-        ),
+        .library(name: "StorageKit", targets: ["StorageKit"])
+    ],
+    dependencies: [
+        .package(path: "../Core"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "StorageKit"
-        ),
-        .testTarget(
-            name: "StorageKitTests",
-            dependencies: ["StorageKit"]
-        ),
-    ],
-    swiftLanguageModes: [.v6]
+        .target(name: "StorageKit", dependencies: ["Core", ]),
+        .testTarget(name: "StorageKitTests", dependencies: ["StorageKit"])
+    ]
 )

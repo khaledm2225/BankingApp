@@ -3,17 +3,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "AuthFeature",
+    name: "HomeFeature",
     platforms: [.iOS(.v16)],
     products: [
-        .library(name: "AuthFeature", targets: ["AuthFeature"])
+        .library(name: "HomeFeature", targets: ["HomeFeature"])
     ],
     dependencies: [
         .package(path: "../Core"),
         .package(path: "../DesignSystem"),
     ],
     targets: [
-        .target(name: "AuthFeature", dependencies: ["Core", "DesignSystem"]),
-        .testTarget(name: "AuthFeatureTests", dependencies: ["AuthFeature"])
+        .target(name: "HomeFeature", dependencies: ["Core", "DesignSystem", ]),
+        .testTarget(name: "HomeFeatureTests", dependencies: ["HomeFeature"])
     ]
 )
