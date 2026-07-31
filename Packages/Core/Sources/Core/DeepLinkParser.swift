@@ -17,6 +17,15 @@ public enum DeepLinkParser {
         case "login":
             return .login
             
+        case "transactions":
+            guard let id = URLComponents(url: url, resolvingAgainstBaseURL: false)?
+                .queryItems?
+                .first(where: { $0.name == "accountID" })?
+                .value
+            else { return nil }
+            
+            return .transactions(accountID: id)
+            
         default:
             return nil
         }
