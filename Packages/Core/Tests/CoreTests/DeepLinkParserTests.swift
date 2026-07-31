@@ -11,13 +11,25 @@ final class DeepLinkParserTests: XCTestCase {
     
     func test_route_returnsNil_forUnknownHost() {
         let url = URL(string: "bankingapp://settings")!
+       
         XCTAssertNil(DeepLinkParser.route(from: url))
     }
  
     
     func test_route_returnsLogin_forLoginHost() {
         let url = URL(string: "bankingapp://login")!
+        
         XCTAssertEqual(DeepLinkParser.route(from: url), .login)
+    }
+    
+    func test_route_returnsTransactions_forTransactionsHost() {
+        let givenAccountID = "123"
+        let url = URL(string: "bankingapp://transactions?accountID=\(givenAccountID)")!
+        
+        XCTAssertEqual(
+            DeepLinkParser.route(from: url),
+            .transactions(accountID: givenAccountID)
+        )
     }
     
 }
