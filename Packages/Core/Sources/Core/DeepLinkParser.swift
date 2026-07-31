@@ -13,6 +13,10 @@ public enum DeepLinkParser {
         switch url.host {
         case "home" :
             return .home
+            
+        case "login":
+            return .login
+            
         default:
             return nil
         }
