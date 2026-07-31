@@ -9,7 +9,14 @@ import Foundation
 public enum DeepLinkParser {
     
     public static func route(from url: URL) -> Route? {
-        return .home
+        
+        switch url.host {
+        case "home" :
+            return .home
+        default:
+            return nil
+        }
+        
     }
     
 }
