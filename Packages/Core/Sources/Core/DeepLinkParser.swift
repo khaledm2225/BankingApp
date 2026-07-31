@@ -1,38 +1,36 @@
-//
-//  File.swift
-//  Core
-//
-//  Created by Khaled Mohamed on 01/08/2026.
-//
-
 import Foundation
+
+private enum DeepLinkHost: String {
+    case home
+    case login
+    case transactions
+}
+
 public enum DeepLinkParser {
-    
+
     public static func route(from url: URL) -> Route? {
-        
-        switch url.host {
-        case "home" :
+        guard
+            let host = url.host,
+            let deepLinkHost = DeepLinkHost(rawValue: host)
+        else { return nil }
+
+        switch deepLinkHost {
+        case .home:
             return .home
-            
-        case "login":
+
+        case .login:
             return .login
-            
-        case "transactions":
+
+        case .transactions:
             guard let id = accountID(from: url) else { return nil }
             return .transactions(accountID: id)
-            
-        default:
-            return nil
         }
-        
     }
-    
-    
+
     private static func accountID(from url: URL) -> String? {
         URLComponents(url: url, resolvingAgainstBaseURL: false)?
             .queryItems?
             .first(where: { $0.name == "accountID" })?
             .value
     }
-    
 }
