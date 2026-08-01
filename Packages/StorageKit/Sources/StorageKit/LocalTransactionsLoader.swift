@@ -23,7 +23,9 @@ public final class LocalTransactionsLoader {
         return .success(.init(transactions: cached.transactions, source: .cache, capturedAt: cached.capturedAt))
     }
     
-    
+    public func save(_ transactions: [Transaction], accountID: String) {
+        store.insert(transactions, accountID: accountID, capturedAt: Date())
+    }
     
     
 }
