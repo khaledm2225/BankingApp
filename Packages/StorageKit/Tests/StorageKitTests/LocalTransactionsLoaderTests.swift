@@ -1,6 +1,7 @@
 import Foundation
 import XCTest
 import Combine
+import Core
 @testable import StorageKit
 
 final class LocalTransactionsLoaderTests: XCTestCase {
@@ -14,7 +15,7 @@ final class LocalTransactionsLoaderTests: XCTestCase {
         
         XCTAssertEqual(result, .failure(.noCache))
     }
-  
+    
     
     func test_load_returnsExpired_whenCacheIsOlderThan24Hours() {
         let store = TransactionsStoreSpy()
@@ -29,5 +30,40 @@ final class LocalTransactionsLoaderTests: XCTestCase {
         
         XCTAssertEqual(result, .failure(.cacheExpired))
     }
+    
+    
+    
+    func test_load_deliversTransactions_whenCacheIsNotExpired() {
+            let transaction = Transaction(
+                id: "t1",
+                amount: Decimal(string: "-250.00")!,
+                date: Date(),
+                merchant: "Carrefour"
+            )
+            let capturedAt = Date().addingTimeInterval(-1 * 3600)
+
+            let store = TransactionsStoreSpy()
+            store.stubbedResult = (
+                transactions: [transaction],
+                capturedAt: capturedAt
+            )
+
+            let sut = LocalTransactionsLoader(store: store)
+
+            let result = sut.loadTransactions(accountID: "account123")
+
+            XCTAssertEqual(
+                result,
+                .success(
+                    TransactionsSnapshot(
+                        transactions: [transaction],
+                        source: .cache,
+                        capturedAt: capturedAt
+                    )
+                )
+            )
+        }
+    
+    
     
 }
