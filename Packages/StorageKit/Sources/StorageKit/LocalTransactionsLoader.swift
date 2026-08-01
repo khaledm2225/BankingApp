@@ -20,7 +20,7 @@ public final class LocalTransactionsLoader {
             return .failure(.cacheExpired)
         }
         
-        return .failure(.noCache)
+        return .success(.init(transactions: cached.transactions, source: .cache, capturedAt: cached.capturedAt))
     }
     
     
