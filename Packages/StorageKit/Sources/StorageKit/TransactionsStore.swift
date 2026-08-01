@@ -9,9 +9,8 @@ import Foundation
 import Core
 
 public protocol TransactionsStore {
-    
-    func fetch(account: String) -> (transtions: [Transaction], capturedAt: Date)?
+
+    func fetch(accountID: String) -> (transactions: [Transaction], capturedAt: Date)?
     func insert(_ transactions: [Transaction], accountID: String, capturedAt: Date)
     func delete(accountID: String)
-    
 }
