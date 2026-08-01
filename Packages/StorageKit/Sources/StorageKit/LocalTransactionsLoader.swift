@@ -9,7 +9,20 @@ public final class LocalTransactionsLoader {
     }
     
     func loadTransactions(accountID: String) -> Result<TransactionsSnapshot, TransactionsError> {
+        
+        guard let cached = store.fetch(accountID: accountID) else {
+            return .failure(.noCache)
+        }
+        
+        let age = Date().timeIntervalSince(cached.capturedAt)
+        
+        guard age < 24 * 3600 else {
+            return .failure(.cacheExpired)
+        }
+        
         return .failure(.noCache)
     }
+    
+    
     
 }
