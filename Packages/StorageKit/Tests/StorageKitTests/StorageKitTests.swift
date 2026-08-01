@@ -1,8 +1,0 @@
-import XCTest
-@testable import StorageKit
-
-final class StorageKitTests: XCTestCase {
-    func test_targetCompiles() {
-        XCTAssertTrue(true)
-    }
-}
